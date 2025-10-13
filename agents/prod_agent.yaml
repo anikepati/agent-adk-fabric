@@ -1,1 +1,11 @@
-
+name: ProdLLMAgent
+id: prod-llm-agent
+description: "Production LLM agent (search + weather, more powerful model)"
+entrypoint: "python run_agent.py --agent-id prod-llm-agent"
+adk:
+  model: "gemini-1.5-pro"
+  tools:
+    - google_search
+    - weather
+env:
+  MODE: prod
