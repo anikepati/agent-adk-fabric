@@ -1,1 +1,8 @@
-
+groups:
+  DevGroup:
+    agents:
+      - agents/dev_agent.yaml
+  AdminGroup:
+    agents:
+      - agents/dev_agent.yaml
+      - agents/prod_agent.yaml
