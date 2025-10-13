@@ -1,1 +1,23 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
 
+[project]
+name = "agent-adk-fabric"
+version = "0.3.0"
+description = "Dynamic AD-driven agent fabric using Google ADK with a Streamlit UI"
+authors = [{name="Infra Team", email="infra@example.com"}]
+requires-python = ">=3.9"
+
+dependencies = [
+  "pywin32; platform_system=='Windows'",
+  "pyyaml",
+  "click",
+  "requests",
+  "google-adk",
+  "python-dotenv",
+  "streamlit"
+]
+
+[project.scripts]
+agentctl = "agent_adk_fabric.cli:main"
