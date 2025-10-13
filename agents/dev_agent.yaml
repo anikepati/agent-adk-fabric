@@ -1,1 +1,11 @@
-
+name: DevLLMAgent
+id: dev-llm-agent
+description: "Developer LLM agent (search + weather)"
+entrypoint: "python run_agent.py --agent-id dev-llm-agent"
+adk:
+  model: "gemini-1.5-flash"
+  tools:
+    - google_search
+    - weather
+env:
+  MODE: dev
